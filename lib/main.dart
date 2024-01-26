@@ -34,45 +34,38 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.normal,
                     color: Colors.blueAccent.shade100),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.blueAccent.shade100,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+9477 899 999',
-                      style: TextStyle(color: Colors.blueAccent.shade100),
-                    ),
-                  ],
-                ),
+                child: Padding(
+                    padding: EdgeInsets.all(
+                        0), //padding isnt needed in the updated cards.
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.blueAccent.shade100,
+                      ),
+                      title: Text(
+                        '+9477 899 999',
+                        style: TextStyle(color: Colors.blueAccent.shade100),
+                      ),
+                    )),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.face,
-                      color: Colors.blueAccent.shade100,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'Mr Fisher Sushi',
-                      style: TextStyle(color: Colors.blueAccent.shade100),
-                    ),
-                  ],
-                ),
+                child: Padding(
+                    padding: EdgeInsets.all(0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.face,
+                        color: Colors.blueAccent.shade100,
+                      ),
+                      title: Text(
+                        'Mr Fisher Sushi',
+                        style: TextStyle(color: Colors.blueAccent.shade100),
+                      ),
+                    )),
               ),
             ],
           ),
